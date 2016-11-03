@@ -13,16 +13,16 @@ import com.seu.wsn.Core.StaticConst.WebConst;
 /**
  * 
  * @ClassName: LoginInterceptor 
- * @Description: µÇÂ¼À¹½ØÆ÷
+ * @Description: ç™»å½•æ‹¦æˆªå™¨
  * @author: CSS
- * @date: 2016-10-30 ÉÏÎç10:45:05
+ * @date: 2016-10-30 ä¸Šåˆ10:45:05
  */
 public class LoginInterceptor implements HandlerInterceptor{
-	private List<String> allowedPass;		//ÔÊĞí²»±»À¹½ØµÄURL
+	private List<String> allowedPass;		//è®¾ç½®å…è®¸ä¸è¢«æ‹¦å‡»çš„URL
 	/**
 	 * 
 	 * @Title: setAllowedPadd 
-	 * @Description: ×¢ÈëallowedPass
+	 * @Description:æ³¨å…¥allowedPass
 	 * @param allowedPadd
 	 * @return: void
 	 */

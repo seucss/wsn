@@ -8,7 +8,13 @@ import java.util.concurrent.Executors;
 
 import com.seu.wsn.Service.NodeService;
 
-
+/**
+ * 
+ * @ClassName: ServerController 
+ * @Description:节点控制器
+ * @author: CSS
+ * @date: 2016-11-3 下午8:01:18
+ */
 public class ServerController implements Runnable{
 	private String testId;
 	private NodeService nodeService;

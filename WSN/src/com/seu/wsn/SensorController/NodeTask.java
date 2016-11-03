@@ -4,15 +4,21 @@ import java.net.Socket;
 
 import com.seu.wsn.Core.Pojo.Node;
 import com.seu.wsn.Service.NodeService;
-
+/**
+ * 
+ * @ClassName: NodeTask 
+ * @Description: èŠ‚ç‚¹ä»»åŠ¡ç±»
+ * @author: CSS
+ * @date: 2016-11-3 ä¸‹åˆ8:06:12
+ */
 public class NodeTask implements Runnable{
-	private Socket socket;			//½ÓÊÕ¿Í»§¶Ësocekt
-	private String testId;			//²âÊÔ±àºÅ	
+	private Socket socket;			//å®¢æˆ·ç«¯socekt
+	private String testId;			//æµ‹è¯•ç¼–å·	
 	private NodeService nodeService; //nodeService
 	/**
 	 * 
 	 * @Title:NodeTask
-	 * @Description:¹¹Ôìº¯Êı 
+	 * @Description:æ„é€ å‡½æ•°
 	 * @param socket
 	 * @param testId
 	 */
@@ -22,11 +28,11 @@ public class NodeTask implements Runnable{
 		this.nodeService = nodeService;
 	}
 	/**
-	 * Ïß³ÌÖ´ĞĞ
+	 * çº¿ç¨‹æ‰§è¡Œå‡½æ•°
 	 */
 	@Override
 	public void run() {
-		String ip = socket.getInetAddress().toString().substring(1); //»ñµÃ½Úµãip
+		String ip = socket.getInetAddress().toString().substring(1); //ï¿½ï¿½Ã½Úµï¿½ip
 		Node node = new Node();
 		node.setIp(ip);
 		node.setTestId(testId);

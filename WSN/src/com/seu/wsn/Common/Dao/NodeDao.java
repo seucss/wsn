@@ -7,15 +7,15 @@ import com.seu.wsn.Core.Pojo.Node;
 /**
  * 
  * @ClassName: NodeDao 
- * @Description: ½ÚµãÊı¾İ·ÃÎÊ²ã½Ó¿Ú
+ * @Description: èŠ‚ç‚¹æ•°æ®è®¿é—®å±‚æ¥å£
  * @author: CSS
- * @date: 2016-11-3 ÉÏÎç9:55:30
+ * @date: 2016-11-3 ä¸Šåˆ9:55:30
  */
 public interface NodeDao {
 	/**
 	 * 
 	 * @Title: select 
-	 * @Description: ¸ù¾İ½ÚµãIdºÍ²âÊÔ±àºÅÑ¡Ôñ½Úµã
+	 * @Description: æ ¹æ®èŠ‚ç‚¹idå’Œæµ‹è¯•ç¼–å·æŸ¥è¯¢èŠ‚ç‚¹
 	 * @param nodeId
 	 * @param testId
 	 * @return
@@ -26,7 +26,7 @@ public interface NodeDao {
 	/**
 	 * 
 	 * @Title: insert 
-	 * @Description: ĞÂÔöÒ»¸ö½Úµã
+	 * @Description: æ’å…¥æ–°èŠ‚ç‚¹
 	 * @param node
 	 * @return: void
 	 */
@@ -35,7 +35,7 @@ public interface NodeDao {
 	/**
 	 * 
 	 * @Title: update 
-	 * @Description: ¸üĞÂ½ÚµãĞÅÏ¢
+	 * @Description: æ›´æ–°èŠ‚ç‚¹ä¿¡æ¯
 	 * @param node
 	 * @return: void
 	 */
@@ -44,7 +44,7 @@ public interface NodeDao {
 	/**
 	 * 
 	 * @Title: remove 
-	 * @Description: ¸ù¾İ½ÚµãidºÍ²âÊÔ±àºÅÉ¾³ıÒ»¸ö½Úµã
+	 * @Description: æ ¹æ®èŠ‚ç‚¹idå’Œæµ‹è¯•ç¼–å·åˆ é™¤èŠ‚ç‚¹
 	 * @param nodeId
 	 * @param testId
 	 * @return: void
@@ -52,14 +52,14 @@ public interface NodeDao {
 	//public void remove(String nodeId,String testId);
 	
 	/**
-	 * ·µ»ØËùÓĞ½Úµã
+	 * è·å–èŠ‚ç‚¹åˆ—è¡¨
 	 * @return
 	 */
 	public List<Node> nodeList();
 	/**
 	 * 
 	 * @Title: getNodeListByTestId 
-	 * @Description: ¸ù¾İ²âÊÔ±àºÅ·µ»Ø½ÚµãÁĞ±í
+	 * @Description: æ ¹æ®æµ‹è¯•ç¼–å·è·å–æ»¡è¶³æ¡ä»¶çš„èŠ‚ç‚¹åˆ—è¡¨
 	 * @param testId
 	 * @return
 	 * @return: List<Node>

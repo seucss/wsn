@@ -23,7 +23,7 @@ import com.seu.wsn.Service.UserService;
  * @ClassName: UserController 
  * @Description: userController
  * @author: CSS
- * @date: 2016-10-23 上午11:25:32
+ * @date: 2016-10-23 涓婂崍11:25:32
  */
 @Controller
 public class UserController{
@@ -33,13 +33,13 @@ public class UserController{
 	private NodeService nodeService;
 	
 	/**
-	 * 注入userService
+	 * 娉ㄥ叆userService
 	 */
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
 	/**
-	 * 注入nodeService
+	 * 娉ㄥ叆nodeService
 	 */
 	public void setNodeService(NodeService nodeService) {
 		this.nodeService = nodeService;
@@ -47,7 +47,7 @@ public class UserController{
 	/**
 	 * 
 	 * @Title: login 
-	 * @Description: 登录
+	 * @Description: 鐢ㄦ埛鐧诲綍璇锋眰
 	 * @param req
 	 * @param resp
 	 * @param model
@@ -78,7 +78,7 @@ public class UserController{
 	/**
 	 * 
 	 * @Title: register 
-	 * @Description: 用户注册
+	 * @Description: 杩斿洖娉ㄥ唽椤甸潰
 	 * @param req
 	 * @param resp
 	 * @param model
@@ -95,7 +95,7 @@ public class UserController{
 	/**
 	 * 
 	 * @Title: loginUser 
-	 * @Description: 返回用户登录页面
+	 * @Description: 鐢ㄦ埛鐧诲綍
 	 * @param req
 	 * @param resp
 	 * @param model
@@ -112,7 +112,7 @@ public class UserController{
 	/**
 	 * 
 	 * @Title: checkUnique 
-	 * @Description: 检查注册名是否唯一
+	 * @Description: 鍒ゆ柇鐢ㄦ埛鍚嶆槸鍚﹀敮涓�
 	 * @param req
 	 * @param resp
 	 * @param model
@@ -134,7 +134,7 @@ public class UserController{
 	/**
 	 * 
 	 * @Title: registerUser 
-	 * @Description: 提交用户注册信息
+	 * @Description: 鐢ㄦ埛娉ㄥ唽
 	 * @param req
 	 * @param resp
 	 * @param model
@@ -155,7 +155,7 @@ public class UserController{
 	/**
 	 * 
 	 * @Title: userList 
-	 * @Description: 接收用户请求，返回用户列表
+	 * @Description: 鑾峰彇鐢ㄦ埛鍒楄〃
 	 * @param req
 	 * @param resp
 	 * @param model

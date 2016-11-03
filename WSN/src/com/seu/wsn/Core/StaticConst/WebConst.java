@@ -2,57 +2,59 @@ package com.seu.wsn.Core.StaticConst;
 
 public class WebConst {
 	
-	/***************************************ÏµÍ³Ïà¹ØÒ³Ãæ*******************************************/
+	/***************************************JSPé¡µé¢è·¯å¾„ä¿¡æ¯*******************************************/
 	/*
-	 * ¹ÜÀíÔ±µÇÂ¼Ò³Ãæ
+	 * ç®¡ç†å‘˜ç™»å½•é¡µé¢
 	 */
 	public static final String ADMIN_LOGIN               =          "//WEB-INF//jsp/homePage//adminLogin.jsp";
 	/*
-	 * ÏµÍ³½éÉÜ
+	 * ç³»ç»Ÿç®€ä»‹é¡µé¢
 	 */
 	public static final String INTRODUCTION              =          "//WEB-INF//jsp/homePage//introduction.jsp";
 	/*
-	 * ÓÃ»§µÇÂ¼Ò³Ãæ
+	 * ç”¨æˆ·ç™»å½•é¡µé¢
 	 */
 	public static final String USER_LOGIN                =          "//WEB-INF//jsp/homePage//userLogin.jsp";
 	/*
-	 * ÓÃ»§×¢²áÒ³Ãæ
+	 * ç”¨æˆ·æ³¨å†Œé¡µé¢
 	 */
 	public static final String USER_REGISTER             =          "//WEB-INF//jsp/homePage//userRegister.jsp";
 	/*
-	 * ÏµÍ³Ê×Ò³
+	 * é¦–é¡µ
 	 */
 	public static final String INDEX                     =          "//index.jsp";
-	
+	/*
+	 * èŠ‚ç‚¹ç®¡ç†é¡µé¢
+	 */
 	public static final String NODE_INFO                 =          "//WEB-INF//jsp/nodeManage//nodeInfo.jsp";
 	
 	
 	
-	/*********************************************ÏµÍ³Ïà¹Ø³£Á¿*********************************************************/
+	/*********************************************ç³»ç»Ÿç›¸å…³å¸¸é‡ä¿¡æ¯*********************************************************/
 	/*
-	 * ´íÎóĞÅÏ¢
+	 * é”™è¯¯ä¿¡æ¯
 	 */
 	public static final String ERROR_MSG                 =           "errorMsg";
 	/*
-	 * ·µ»ØĞÅÏ¢
+	 * è¿”å›ä¿¡æ¯
 	 */
 	public static final String MESSAGE                   =            "msg";
 	/*
-	 * ÓÃ»§Ãû
+	 * ç”¨æˆ·å
 	 */
 	public static final String USERNAME                  =            "userName";
 	
-	/***********************************************½Úµã³£Á¿***************************************************************/
+	/***********************************************èŠ‚ç‚¹ç±»å‹***************************************************************/
 	/*
-	 * ÆÕÍ¨½Úµã
+	 * æ™®é€šèŠ‚ç‚¹
 	 */
 	public static final String COMMON_NODE                =           "comonNode";
 	/*
-	 * ´ØÍ·½Úµã 
+	 * ç°‡å¤´èŠ‚ç‚¹
 	 */
 	public static final String CLUSTER_HEAD_NODE          =           "clusterHeadNode";
 	/*
-	 * Íø¹Ø½Úµã
+	 * ç½‘ç®¡èŠ‚ç‚¹
 	 */
 	public static final String GATEWAY_NODE               =           "gatewayNode";
 }
