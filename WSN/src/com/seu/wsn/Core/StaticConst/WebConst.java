@@ -41,6 +41,10 @@ public class WebConst {
 	 * 用户名
 	 */
 	public static final String USERNAME                  =            "userName";
+	/*
+	 * 测试名称
+	 */
+	public static final String TESTID                  =            "testId";
 	
 	/***********************************************节点常量***************************************************************/
 	/*

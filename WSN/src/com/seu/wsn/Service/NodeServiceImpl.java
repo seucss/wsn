@@ -37,6 +37,7 @@ public class NodeServiceImpl implements NodeService{
 	public void insert(Node node) {
 		String ip = node.getIp();
 		String nodeId = ip.substring(8);
+		//设置节点相关信息
 		node.setNodeId(nodeId);
 		node.setDownload(false);
 		node.setJoinNetwork(true);

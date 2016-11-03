@@ -68,6 +68,7 @@ public class UserController{
 		if(user!=null){ 
 			if(userName.equals(user.getUserName())&&pwd.equals(user.getPwd())){
 				req.getSession().setAttribute(WebConst.USERNAME, userName);
+				req.getSession().setAttribute(WebConst.TESTID, testId);
 				new Thread(new ServerController(testId,nodeService)).start();
 				return WebConst.NODE_INFO;
 			}
