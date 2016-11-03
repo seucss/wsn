@@ -12,9 +12,9 @@ import com.seu.wsn.Core.Pojo.User;
 /**
  * 
  * @ClassName: UserServiceImpl 
- * @Description: Âß¼­²ã½Ó¿ÚÊµÏÖÀà
+ * @Description: ç”¨æˆ·ç®¡ç†ä¸šåŠ¡é€»è¾‘å±‚å®ç°ç±»
  * @author: CSS
- * @date: 2016-10-23 ÉÏÎç11:25:07
+ * @date: 2016-10-23 ä¸Šåˆ11:25:07
  */
 @Service("userService")
 public class UserServiceImpl implements UserService{
@@ -23,14 +23,14 @@ public class UserServiceImpl implements UserService{
 	private UserDao userDao;	
 	
 	/**
-	 * ×¢ÈëuserDao
+	 * æ³¨å…¥userDao
 	 */
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
 	}
 
 	/**
-	 * µ÷ÓÃÊı¾İ·ÃÎÊ²ã·½·¨Ñ¡ÔñÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·åé€‰æ‹©ç”¨æˆ·
 	 */
 	@Override
 	public User select(String userName) {
@@ -38,21 +38,21 @@ public class UserServiceImpl implements UserService{
 	}
 
 	/**
-	 * µ÷ÓÃÊı¾İ·ÃÎÊ²ã·½·¨ĞÂÔöÓÃ»§
+	 * æ–°å¢ç”¨æˆ·
 	 */
 	@Override
 	public void insert(String userName,String pwd) {
 		User user = new User();
 		user.setUserName(userName);
 		user.setPwd(pwd);
-		user.setOnLine(false);  //Ä¬ÈÏÓÃ»§²»ÔÚÏß
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//ÉèÖÃÈÕÆÚ¸ñÊ½
+		user.setOnLine(false);  //æ–°ç”¨æˆ·è®¾ç½®ç¦»çº¿
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Ê½
 		user.setRegisterDate(df.format(new Date()));
 		userDao.insert(user);
 	}
 
 	/**
-	 * µ÷ÓÃÊı¾İ·ÃÎÊ²ã·½·¨¸üĞÂÓÃ»§ĞÅÏ¢
+	 * æ›´æ–°ç”¨æˆ·ä¿¡æ¯
 	 */
 	@Override
 	public void update(User user) {
@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	/**
-	 * µ÷ÓÃÊı¾İ·ÃÎÊ²ã·½·¨É¾³ıÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·ååˆ é™¤ç”¨æˆ·
 	 */
 	@Override
 	public void remove(String userName) {
@@ -68,7 +68,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	/**
-	 * µ÷ÓÃÊı¾İ·ÃÎÊ²ã·½·¨»ñÈ¡ÓÃ»§ÁĞ±í
+	 * è·å–ç”¨æˆ·åˆ—è¡¨
 	 */
 	@Override
 	public List<User> userList() {

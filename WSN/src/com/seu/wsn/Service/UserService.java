@@ -6,38 +6,38 @@ import com.seu.wsn.Core.Pojo.User;
 /**
  * 
  * @ClassName: UserService 
- * @Description: ÒµÎñÂß¼­²ã½Ó¿Ú
+ * @Description: ç”¨æˆ·ç®¡ç†ä¸šåŠ¡é€»è¾‘å±‚æ¥å£
  * @author: CSS
- * @date: 2016-10-23 ÉÏÎç11:24:43
+ * @date: 2016-10-23 ä¸Šåˆ11:24:43
  */
 public interface UserService {
 	/**
-	 * ¸ù¾İÓÃ»§ÃûÑ¡ÔñÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·åé€‰æ‹©ç”¨æˆ·
 	 * @param userName
 	 * @return
 	 */
 	public User select(String userName);
 	
 	/**
-	 * Ìí¼ÓÒ»¸öĞÂµÄÓÃ»§
+	 * æ–°å¢ç”¨æˆ·
 	 * @param user
 	 */
 	public void insert(String userName,String pwd);
 	
 	/**
-	 * ¸üĞÂÓÃ»§ĞÅÏ¢
+	 * æ›´æ–°ç”¨æˆ·ä¿¡æ¯
 	 * @param user
 	 */
 	public void update(User user); 
 	
 	/**
-	 * É¾³ıÒ»¸öÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·ååˆ é™¤ç”¨æˆ·
 	 * @param userName
 	 */
 	public void remove(String userName);
 	
 	/**
-	 * ·µ»ØËùÓĞÓÃ»§
+	 * è·å–ç”¨æˆ·åˆ—è¡¨
 	 * @return
 	 */
 	public List<User> userList();

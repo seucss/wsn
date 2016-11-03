@@ -6,15 +6,15 @@ package com.seu.wsn.Core.Pojo;
 /**
  * 
  * @ClassName: User 
- * @Description: ÓÃ»§Àà
+ * @Description: ç”¨æˆ·ç±»
  * @author: CSS
- * @date: 2016-10-23 ÉÏÎç11:24:29
+ * @date: 2016-10-23 ä¸Šåˆ11:24:29
  */
 public class User {
-	private String userName;			//ÓÃ»§Ãû
-	private String pwd;					//ÓÃ»§ÃÜÂë
-	private String registerDate;		//×¢²áÈÕÆÚ
-	private boolean onLine;				//ÊÇ·ñÔÚÏß
+	private String userName;			//ç”¨æˆ·å
+	private String pwd;					//ç”¨æˆ·å¯†ç 
+	private String registerDate;		//æ³¨å†Œæ—¥æœŸ
+	private boolean onLine;				//æ˜¯å¦åœ¨çº¿
 	
 	/**
 	 * 

@@ -11,9 +11,9 @@ import com.seu.wsn.Core.StaticConst.WebConst;
 /**
  * 
  * @ClassName: NodeServiceImpl 
- * @Description: ½ÚµãÒµÎñÂß¼­²ãÊµÏÖÀà
+ * @Description: èŠ‚ç‚¹ä¸šåŠ¡é€»è¾‘å±‚å®ç°ç±»
  * @author: CSS
- * @date: 2016-11-3 ÏÂÎç2:12:41
+ * @date: 2016-11-3 ä¸‹åˆ2:12:41
  */
 @Service("nodeService")
 public class NodeServiceImpl implements NodeService{
@@ -23,7 +23,7 @@ public class NodeServiceImpl implements NodeService{
 	/**
 	 * 
 	 * @Title: setNodeDao 
-	 * @Description: ×¢ÈënodeDao
+	 * @Description: æ³¨å…¥nodeDao
 	 * @param nodeDao
 	 * @return: void
 	 */
@@ -31,7 +31,7 @@ public class NodeServiceImpl implements NodeService{
 		this.nodeDao = nodeDao;
 	}
 	/**
-	 * ²åÈëĞÂ½Úµã
+	 * æ’å…¥æ–°èŠ‚ç‚¹
 	 */
 	@Override
 	public void insert(Node node) {
@@ -47,21 +47,21 @@ public class NodeServiceImpl implements NodeService{
 		nodeDao.insert(node);
 	}
 	/**
-	 * ¸üĞÂ½ÚµãĞÅÏ¢
+	 * æ›´æ–°èŠ‚ç‚¹ä¿¡æ¯
 	 */
 	@Override
 	public void update(Node node) {
 		nodeDao.update(node);
 	}
 	/**
-	 * »ñÈ¡½ÚµãÁĞ±í
+	 * è·å–èŠ‚ç‚¹åˆ—è¡¨
 	 */
 	@Override
 	public List<Node> nodeList() {
 		return nodeDao.nodeList();
 	}
 	/**
-	 * ¸ù¾İ²âÊÔ±àºÅ»ñÈ¡½ÚµãÁĞ±í
+	 * æ ¹æ®æµ‹è¯•ç¼–å·è·å–æ»¡è¶³æ¡ä»¶çš„èŠ‚ç‚¹åˆ—è¡¨
 	 */
 	@Override
 	public List<Node> getNodeListByTestId(String testId) {

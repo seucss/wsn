@@ -3,19 +3,19 @@ package com.seu.wsn.Core.Pojo;
 /**
  * 
  * @ClassName: Node 
- * @Description: ½ÚµãĞÅÏ¢Àà
+ * @Description: èŠ‚ç‚¹ç±»
  * @author: CSS
- * @date: 2016-11-2 ÏÂÎç3:14:45
+ * @date: 2016-11-2 ä¸‹åˆ3:14:45
  */
 public class Node {
-	private String nodeId;					//½Úµãid
-	private String ip;					//½Úµãip
-	private String parentId;			//¸¸½Úµãid
-	private String nodeType;			//½ÚµãÀàĞÍ   
-	private String testId;				//²âÊÔ±àºÅ
-	private boolean onLine;				//ÊÇ·ñÔÚÏß
-	private boolean download;			//ÊÇ·ñÉÕÂ¼Ğ­Òé
-	private boolean joinNetwork;		//ÊÇ·ñ²ÎÓë×éÍø
+	private String nodeId;				//èŠ‚ç‚¹id
+	private String ip;					//èŠ‚ç‚¹ip
+	private String parentId;			//çˆ¶èŠ‚ç‚¹id
+	private String nodeType;			//èŠ‚ç‚¹ç±»å‹   
+	private String testId;				//æµ‹è¯•ç¼–å·
+	private boolean onLine;				//æ˜¯å¦åœ¨çº¿
+	private boolean download;			//æ˜¯å¦å·²çƒ§å½•åè®®
+	private boolean joinNetwork;		//æ˜¯å¦å‚ä¸ç»„ç½‘
 	/**
 	 * 
 	 * @Title: getTestId 

@@ -12,12 +12,12 @@ import com.seu.wsn.Core.Pojo.User;
  * @ClassName: UserDaoImpl 
  * @Description: UserDaoImpl
  * @author: CSS
- * @date: 2016-10-23 ÉÏÎç11:23:18
+ * @date: 2016-10-23 ï¿½ï¿½ï¿½ï¿½11:23:18
  */
 @Repository("userDao")
 public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
 	/**
-	 * ×¢ÈëSqlSessionFactory
+	 * æ³¨å…¥SqlSessionFactory
 	 */
 	@Autowired
 	@Override
@@ -25,35 +25,35 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{
 		super.setSqlSessionFactory(sqlSessionFactory);
 	}
 	/**
-	 * »ñÈ¡ÓÃ»§ÁĞ±í
+	 *è·å–ç”¨æˆ·åˆ—è¡¨
 	 */
 	@Override
 	public List<User> userList() {
 		return getSqlSession().selectList("com.seu.wsn.user.mapper.userList");
 	}
 	/**
-	 * ¸ù¾İÓÃ»§ÃûÑ¡ÔñÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·åé€‰æ‹©ç”¨æˆ·
 	 */
 	@Override
 	public User select(String userName) {
 		return getSqlSession().selectOne("com.seu.wsn.user.mapper.selectUser", userName);
 	}
 	/**
-	 * ĞÂÔöÒ»¸öÓÃ»§
+	 * æ–°å¢ç”¨æˆ·
 	 */
 	@Override
 	public void insert(User user) {
 		getSqlSession().insert("com.seu.wsn.user.mapper.insertUser", user);
 	}
 	/**
-	 * ¸üĞÂÓÃ»§ĞÅÏ¢
+	 * æ›´æ–°ç”¨æˆ·ä¿¡æ¯
 	 */
 	@Override
 	public void update(User user) {
 		getSqlSession().update("com.seu.wsn.user.mapper.updateUser", user);
 	}
 	/**
-	 * É¾³ıÓÃ»§
+	 * æ›´åŠ ç”¨æˆ·ååˆ é™¤ç”¨æˆ·
 	 */
 	@Override
 	public void remove(String userName) {

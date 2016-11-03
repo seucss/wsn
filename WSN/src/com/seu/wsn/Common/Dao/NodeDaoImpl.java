@@ -11,14 +11,14 @@ import com.seu.wsn.Core.Pojo.Node;
 /**
  * 
  * @ClassName: NodeDaoImpl 
- * @Description: ½ÚµãÊı¾İ·ÃÎÊ²ãÊµÏÖÀà
+ * @Description: èŠ‚ç‚¹æ•°æ®è®¿é—®å±‚å®ç°ç±»
  * @author: CSS
- * @date: 2016-11-3 ÉÏÎç10:00:35
+ * @date: 2016-11-3 ä¸Šåˆ10:00:35
  */
 @Repository("nodeDao")
 public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 	/**
-	 * ×¢ÈëSqlSessionFactory
+	 * æ³¨å…¥SqlSessionFactory
 	 */
 	@Autowired
 	@Override
@@ -27,7 +27,7 @@ public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 	}
 
 	/**
-	 * ²åÈë½Úµã
+	 * æ’å…¥æ–°èŠ‚ç‚¹
 	 */
 	@Override
 	public void insert(Node node) {
@@ -35,7 +35,7 @@ public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 		
 	}
 	/**
-	 * ¸üĞÂ½ÚµãĞÅÏ¢
+	 * æ›´æ–°èŠ‚ç‚¹ä¿¡æ¯
 	 */
 	@Override
 	public void update(Node node) {
@@ -43,14 +43,14 @@ public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 		
 	}
 	/**
-	 * »ñÈ¡½ÚµãÁĞ±í
+	 * è·å–èŠ‚ç‚¹åˆ—è¡¨
 	 */
 	@Override
 	public List<Node> nodeList() {
 		return getSqlSession().selectList("com.seu.wsn.node.mapper.nodeList");
 	}
 	/**
-	 * ¸ù¾İ²âÊÔ±àºÅ»ñÈ¡½ÚµãÁĞ±í
+	 * æ ¹æ®æµ‹è¯•ç¼–å·è·å–æ»¡è¶³æ¡ä»¶çš„èŠ‚ç‚¹åˆ—è¡¨
 	 */
 	@Override
 	public List<Node> getNodeListByTestId(String testId) {
