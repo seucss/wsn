@@ -8,5 +8,6 @@
 
 	<mappers>
 		<mapper resource="mapper/user.mapper.xml" />
+		<mapper resource="mapper/node.mapper.xml" />
 	</mappers>
 </configuration>

@@ -33,5 +33,7 @@
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>*.wsn</url-pattern>     		 <!-- 拦截所有.wsn的URL -->
+		<url-pattern>*.json</url-pattern>     		 <!-- 拦截所有.json的URL -->
+		
 	</servlet-mapping>
 </web-app>

@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.seu.wsn.Model.Pojo.User;
+import com.seu.wsn.Core.Pojo.User;
 /**
  * 
  * @ClassName: UserDaoImpl 

@@ -2,7 +2,7 @@ package com.seu.wsn.Service;
 
 import java.util.List;
 
-import com.seu.wsn.Model.Pojo.User;
+import com.seu.wsn.Core.Pojo.User;
 /**
  * 
  * @ClassName: UserService 
@@ -22,7 +22,7 @@ public interface UserService {
 	 * 添加一个新的用户
 	 * @param user
 	 */
-	public void insert(User user);
+	public void insert(String userName,String pwd);
 	
 	/**
 	 * 更新用户信息

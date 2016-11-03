@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.seu.wsn.Model.Pojo;
+package com.seu.wsn.Core.Pojo;
 
 /**
  * 
@@ -72,7 +72,5 @@ public class User {
 	public void setOnLine(boolean onLine) {
 		this.onLine = onLine;
 	}
-	
-	
 
 }

@@ -4,9 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>jQuery</title>
+<script type="text/javascript" src="resource/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('a').click(function(){
+			alert("这是弹出的内容");
+		});
+	});
+</script>
 </head>
 <body>
-asdsaf
+	<a href="#">点击弹出内容</a>
 </body>
 </html>

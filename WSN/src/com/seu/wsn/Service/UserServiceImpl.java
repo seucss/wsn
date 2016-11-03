@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.seu.wsn.Common.Dao.UserDao;
-import com.seu.wsn.Model.Pojo.User;
+import com.seu.wsn.Core.Pojo.User;
 /**
  * 
  * @ClassName: UserServiceImpl 
@@ -41,7 +41,10 @@ public class UserServiceImpl implements UserService{
 	 * 调用数据访问层方法新增用户
 	 */
 	@Override
-	public void insert(User user) {
+	public void insert(String userName,String pwd) {
+		User user = new User();
+		user.setUserName(userName);
+		user.setPwd(pwd);
 		user.setOnLine(false);  //默认用户不在线
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
 		user.setRegisterDate(df.format(new Date()));
