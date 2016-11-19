@@ -12,7 +12,7 @@ import com.seu.wsn.Core.Pojo.User;
  * @ClassName: UserDaoImpl 
  * @Description: UserDaoImpl
  * @author: CSS
- * @date: 2016-10-23 ����11:23:18
+ * @date: 2016-10-23 上午11:23:18
  */
 @Repository("userDao")
 public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao{

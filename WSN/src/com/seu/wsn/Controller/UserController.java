@@ -1,6 +1,5 @@
 package com.seu.wsn.Controller;
 
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,11 +10,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.seu.wsn.Core.Pojo.Node;
 import com.seu.wsn.Core.Pojo.User;
 import com.seu.wsn.Core.StaticConst.WebConst;
-import com.seu.wsn.SensorController.ServerController;
-import com.seu.wsn.Service.NodeService;
 import com.seu.wsn.Service.UserService;
 
 /**
@@ -29,21 +25,14 @@ import com.seu.wsn.Service.UserService;
 public class UserController{
 	@Autowired
 	private UserService userService;
-	@Autowired
-	private NodeService nodeService;
-	
+
 	/**
 	 * 注入userService
 	 */
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
-	/**
-	 * 注入nodeService
-	 */
-	public void setNodeService(NodeService nodeService) {
-		this.nodeService = nodeService;
-	}
+
 	/**
 	 * 
 	 * @Title: login 
@@ -58,19 +47,13 @@ public class UserController{
 	 */
 	@RequestMapping("/login")
 	public String login(HttpServletRequest req,HttpServletResponse resp,ModelMap model,
-			String userName,String pwd,String testId){
-		List<Node> nodeList = nodeService.getNodeListByTestId(testId);
-		if(nodeList.size()>0){
-			model.put(WebConst.ERROR_MSG, "testId");
-			return  WebConst.INDEX;
-		}
+			String userName,String pwd){
+		
 		User user = userService.select(userName);
 		if(user!=null){ 
 			if(userName.equals(user.getUserName())&&pwd.equals(user.getPwd())){
 				req.getSession().setAttribute(WebConst.USERNAME, userName);
-				req.getSession().setAttribute(WebConst.TESTID, testId);
-				new Thread(new ServerController(testId,nodeService)).start();
-				return WebConst.NODE_INFO;
+				return WebConst.INTRODUCTION;
 			}
 		}
 		model.put(WebConst.ERROR_MSG, "nameOrpwd");

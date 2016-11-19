@@ -14,8 +14,30 @@ public class Node {
 	private String nodeType;			//节点类型   
 	private String testId;				//测试编号
 	private boolean onLine;				//是否在线
-	private boolean download;			//是否已烧录协议
+	private boolean download;			//是否已下载协议
+	private boolean burner;              //是否已烧录协议
 	private boolean joinNetwork;		//是否参与组网
+	
+	/**
+	 * 
+	 * @Title: isBurner 
+	 * @Description: TODO
+	 * @return
+	 * @return: boolean
+	 */
+	public boolean isBurner() {
+		return burner;
+	}
+	/**
+	 * 
+	 * @Title: setBurner 
+	 * @Description: TODO
+	 * @param burner
+	 * @return: void
+	 */
+	public void setBurner(boolean burner) {
+		this.burner = burner;
+	}
 	/**
 	 * 
 	 * @Title: getTestId 

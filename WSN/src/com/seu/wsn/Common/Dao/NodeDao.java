@@ -15,13 +15,12 @@ public interface NodeDao {
 	/**
 	 * 
 	 * @Title: select 
-	 * @Description: 根据节点id和测试编号查询节点
-	 * @param nodeId
-	 * @param testId
+	 * @Description: 根据条件选择节点
+	 * @param node
 	 * @return
 	 * @return: Node
 	 */
-	//public Node select(String nodeId,String testId);
+	public Node select(Node node);
 	
 	/**
 	 * 
@@ -65,4 +64,13 @@ public interface NodeDao {
 	 * @return: List<Node>
 	 */
 	public List<Node> getNodeListByTestId(String testId);
+	/**
+	 * 
+	 * @Title: getNodeListByTestId 
+	 * @Description: 根据节点类型获取满足条件的节点列表
+	 * @param testId
+	 * @return
+	 * @return: List<Node>
+	 */
+	public List<Node> getNodeListByNodeType(Node node);
 }

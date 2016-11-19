@@ -4,23 +4,28 @@
 
 <mapper namespace="com.seu.wsn.node.mapper">
 	<!-- 选择节点 -->
-	<select id="selectNode" parameterType="java.lang.String" resultType="com.seu.wsn.Core.Pojo.Node">
-		select * from tb_node where id=#{id}
+	<select id="selectNode" parameterType="com.seu.wsn.Core.Pojo.Node" resultType="com.seu.wsn.Core.Pojo.Node">
+		select * from tb_node where nodeId=#{nodeId} and testId=#{testId}
+	</select>
+	
+	<!-- 根据节点类型选择节点 -->
+	<select id="selectNodeByType" parameterType="com.seu.wsn.Core.Pojo.Node" resultType="com.seu.wsn.Core.Pojo.Node">
+		select * from tb_node where nodeType=#{nodeType} and testId=#{testId}
 	</select>
 	
 	<!-- 新增节点 -->
 	<insert id="insertNode" parameterType="com.seu.wsn.Core.Pojo.Node">
-		insert into tb_node(nodeId,ip,parentId,nodeType,onLine,download,joinNetwork,testId) values(#{nodeId}, #{ip},#{parentId}, #{nodeType}, #{onLine}, #{download}, #{joinNetwork},#{testId})
+		insert into tb_node(nodeId,ip,parentId,nodeType,onLine,download,joinNetwork,testId,burner) values(#{nodeId}, #{ip},#{parentId}, #{nodeType}, #{onLine}, #{download}, #{joinNetwork},#{testId},#{burner})
 	</insert>
 	
 	<!-- 更新节点信息 -->
 	<update id="updateNode" parameterType="com.seu.wsn.Core.Pojo.Node">
-		update tb_node set parentId=#{parentId},nodeType=#{nodeType},onLine=#{onLine},download=#{download},joinNetwork=#{joinNetwork} where nodeId=#{id} and testId=#{testId}
+		update tb_node set burner=#{burner}, parentId=#{parentId},nodeType=#{nodeType},onLine=#{onLine},download=#{download},joinNetwork=#{joinNetwork} where nodeId=#{nodeId} and testId=#{testId}
 	</update>
 	
 	<!-- 删除节点 -->
 	<delete id="deleteNode" parameterType="java.lang.String">
-		delete from tb_node where id=#{id}
+		delete from tb_node where nodeId=#{nodeId}
 	</delete>
 
 	<!-- 获取节点列表 -->

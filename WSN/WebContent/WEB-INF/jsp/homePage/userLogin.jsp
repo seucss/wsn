@@ -11,7 +11,7 @@
 <!-- Bootstrap core CSS -->
     <link href="resource/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/signin.css" rel="stylesheet">
-    <script type="text/javascript" src="resource/js/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
     	function register(){
     		window.location.href="register.wsn"

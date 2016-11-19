@@ -3,18 +3,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>jQuery</title>
-<script type="text/javascript" src="resource/js/jquery.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('a').click(function(){
-			alert("这是弹出的内容");
-		});
-	});
-</script>
+ <link href="resource/css/bootstrap.min.css" rel="stylesheet">
+ <link href="resource/css/jquery-confirm.css" rel="stylesheet">
+  <link href="resource/css/nodeInfo.css" rel="stylesheet">
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="resource/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="resource/js/jquery-confirm.js"></script>
 </head>
 <body>
-	<a href="#">点击弹出内容</a>
+<button type="button" class="btn btn-success" onclick="show()">提示框</button>
+ 
+<script type="text/javascript">
+	function show(){
+		$.alert({
+            title: 'success',
+            content: '恭喜，注册成功！',
+            icon: 'fa fa-rocket',
+            animation: 'zoom',
+            closeAnimation: 'zoom',
+            buttons: {
+                okay: {
+                    text: 'Okay',
+                    btnClass: 'btn-primary'
+                }
+            }
+        });
+	} 
+
+</script>
 </body>
 </html>

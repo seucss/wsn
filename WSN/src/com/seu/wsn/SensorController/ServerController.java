@@ -3,9 +3,12 @@ package com.seu.wsn.SensorController;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import com.seu.wsn.Core.StaticConst.Order;
 import com.seu.wsn.Service.NodeService;
 
 /**
@@ -18,24 +21,27 @@ import com.seu.wsn.Service.NodeService;
 public class ServerController implements Runnable{
 	private String testId;
 	private NodeService nodeService;
-	public ServerController(String testId,NodeService nodeService){
+	private ServerSocket serverSocket ;
+	public static List<NodeTask> taskList = new ArrayList<NodeTask>();
+	public ServerController(String testId,NodeService nodeService,ServerSocket serverSocket ){
 		this.testId = testId;
 		this.nodeService = nodeService;
+		this.serverSocket = serverSocket;
 	}
 	
 	@Override
 	public void run() {
 		try {
-			ServerSocket serverSocket = new ServerSocket(6000);
 			ExecutorService executor = Executors.newCachedThreadPool();
-			while(true){
+			while(Order.startConnection){
 				Socket socket = serverSocket.accept();
-				executor.execute(new NodeTask(socket,testId,nodeService));
+				NodeTask task = new NodeTask(socket,testId,nodeService);
+				taskList.add(task);
+				executor.execute(task);
 			}
+			serverSocket = null;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-
 }

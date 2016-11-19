@@ -11,7 +11,7 @@
 <!-- Bootstrap core CSS -->
     <link href="resource/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/signin.css" rel="stylesheet">
-    <script type="text/javascript" src="resource/js/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
     	function register(){
     		window.location.href="register.wsn"
@@ -34,7 +34,6 @@
         <h3 class="form-signin-heading">登录</h3>
         <input type="userName" class="form-control" placeholder="userName" name="userName" id="userName" required autofocus>
         <input type="password" class="form-control" placeholder="password" name="pwd" id="password" required>
-        <input type="testId" class="form-control" placeholder="测试名称" name="testId" id="testId" required>
         <div class="checkbox">
         <label>
           <input type="checkbox" value="remember-me"> Remember me

@@ -11,7 +11,10 @@
 <!-- Bootstrap core CSS -->
     <link href="resource/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/signin.css" rel="stylesheet">
-    <script type="text/javascript" src="resource/js/jquery.min.js"></script>
+    <link href="resource/css/jquery-confirm.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="resource/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="resource/js/jquery-confirm.js"></script>
     <script type="text/javascript">
     	$(document).ready(function(){
     		$(".a1").each(function(){
@@ -44,16 +47,15 @@
 	    					    success:function(data) { 
 	    					        unique = data.msg;
 	    					     }, 
-	    					     error : function() { 
-	    					          // view("异常！"); 
-	    					          alert("系统异常！"); 
+	    					    error : function() { 
+	    					          alert("系统异常!"); 
 	    					     } 
 	    					});
 	    				 if(unique=='true'){ 
 	    					 name = true;
 					         var hdw1 = $("<span class='a2'>输入正确</span>");
 			    			 $(this).parent().append(hdw1);
-				         }else{ 
+				         }else if(unique=='false'){ 
 				        	 name = false;
 				        	 var hdw1 = $("<span class='a2'>用户名已存在</span>");
 		    				 $(this).parent().append(hdw1); 
@@ -101,13 +103,14 @@
     		     //传送请求数据
     		     data: { userName: userName, pwd: password },
     		     success: function (data) { //登录成功后返回的数据
+    		    	 
     		      //根据返回值进行状态显示
     		      if (data.msg == "true") {//注意是True,不是true
-    		    	  alert("注册成功");
+    		    	  alert("注册成功！");
     		    	  window.location.href="userLogin.wsn"
     		      }
     		      else {
-    		       	  alert("系统异常");
+    		    	 alert("系统错误！");
     		      }
     		     }
     		    });

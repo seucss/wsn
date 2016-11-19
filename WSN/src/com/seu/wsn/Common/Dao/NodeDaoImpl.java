@@ -40,7 +40,6 @@ public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 	@Override
 	public void update(Node node) {
 		getSqlSession().update("com.seu.wsn.node.mapper.updateNode", node);
-		
 	}
 	/**
 	 * 获取节点列表
@@ -54,7 +53,24 @@ public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 	 */
 	@Override
 	public List<Node> getNodeListByTestId(String testId) {
+		//return getSqlSession().selectList("com.seu.wsn.node.mapper.nodeListByTestId","6ae39f95-9465-4fcf-8abd-71797171ccf4");
 		return getSqlSession().selectList("com.seu.wsn.node.mapper.nodeListByTestId",testId);
+	}
+	/**
+	 * 根据条件选择节点
+	 */
+	@Override
+	public Node select(Node node) {
+		// TODO Auto-generated method stub
+		return getSqlSession().selectOne("com.seu.wsn.node.mapper.selectNode", node);
+	}
+	/**
+	 * 根据节点类型获取满足条件的节点列表
+	 */
+	@Override
+	public List<Node> getNodeListByNodeType(Node node) {
+		// TODO Auto-generated method stub
+		return getSqlSession().selectList("com.seu.wsn.node.mapper.selectNodeByType",node);
 	}
 
 }

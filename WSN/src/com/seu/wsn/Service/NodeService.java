@@ -2,30 +2,43 @@ package com.seu.wsn.Service;
 
 import java.util.List;
 
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
 import com.seu.wsn.Core.Pojo.Node;
+import com.seu.wsn.Core.Pojo.TopologyLink;
+import com.seu.wsn.Core.Pojo.TopologyNode;
 /**
  * 
  * @ClassName: NodeService 
- * @Description: ½ÚµãÒµÎñÂß¼­²ã½Ó¿Ú
+ * @Description: èŠ‚ç‚¹ç®¡ç†ä¸šåŠ¡é€»è¾‘å±‚æ¥å£
  * @author: CSS
- * @date: 2016-11-3 ÏÂÎç2:11:04
+ * @date: 2016-11-3 ä¸‹åˆ2:11:04
  */
 public interface NodeService {
 	/**
 	 * 
 	 * @Title: select 
-	 * @Description: ¸ù¾İ½ÚµãIdºÍ²âÊÔ±àºÅÑ¡Ôñ½Úµã
-	 * @param nodeId
-	 * @param testId
+	 * @Description: æ ¹æ®æ¡ä»¶é€‰æ‹©èŠ‚ç‚¹
+	 * @param node
 	 * @return
 	 * @return: Node
 	 */
-	//public Node select(String nodeId,String testId);
+	public Node select(String nodeId,String testId);
+	
+	/**
+	 * 
+	 * @Title: getNodeListByTestId 
+	 * @Description: æ ¹æ®èŠ‚ç‚¹ç±»å‹è·å–æ»¡è¶³æ¡ä»¶çš„èŠ‚ç‚¹åˆ—è¡¨
+	 * @param testId
+	 * @return
+	 * @return: List<Node>
+	 */
+	public List<Node> getNodeListByNodeType(String testId,String nodeType);
 	
 	/**
 	 * 
 	 * @Title: insert 
-	 * @Description: ĞÂÔöÒ»¸ö½Úµã
+	 * @Description: æ–°å¢èŠ‚ç‚¹
 	 * @param node
 	 * @return: void
 	 */
@@ -34,7 +47,7 @@ public interface NodeService {
 	/**
 	 * 
 	 * @Title: update 
-	 * @Description: ¸üĞÂ½ÚµãĞÅÏ¢
+	 * @Description: æ›´æ–°èŠ‚ç‚¹ä¿¡æ¯
 	 * @param node
 	 * @return: void
 	 */
@@ -43,7 +56,7 @@ public interface NodeService {
 	/**
 	 * 
 	 * @Title: remove 
-	 * @Description: ¸ù¾İ½ÚµãidºÍ²âÊÔ±àºÅÉ¾³ıÒ»¸ö½Úµã
+	 * @Description: åˆ é™¤èŠ‚ç‚¹
 	 * @param nodeId
 	 * @param testId
 	 * @return: void
@@ -51,17 +64,45 @@ public interface NodeService {
 	//public void remove(String nodeId,String testId);
 	
 	/**
-	 * ·µ»ØËùÓĞ½Úµã
+	 * è·å–èŠ‚ç‚¹ä¿¡æ¯åˆ—è¡¨
 	 * @return
 	 */
 	public List<Node> nodeList();
 	/**
 	 * 
 	 * @Title: getNodeListByTestId 
-	 * @Description: ¸ù¾İ²âÊÔ±àºÅ·µ»Ø½ÚµãÁĞ±í
+	 * @Description: æ ¹æ®æµ‹è¯•ç¼–å·è·å–èŠ‚ç‚¹åˆ—è¡¨
 	 * @param testId
 	 * @return
 	 * @return: List<Node>
 	 */
 	public List<Node> getNodeListByTestId(String testId);
+	
+	/**
+	 * 
+	 * @Title: getTopologyNodes 
+	 * @Description: è·å¾—æ‹“æ‰‘å›¾ä¸­èŠ‚ç‚¹ä¿¡æ¯
+	 * @param testId
+	 * @return: List<TopologyNode>
+	 */
+	public List<List<TopologyNode>> getTopologyNodes(String testId);
+	/**
+	 * 
+	 * @Title: getTopologyLinks 
+	 * @Description: è·å¾—æ‹“æ‰‘å›¾ä¸­èŠ‚ç‚¹è¿æ¥ä¿¡æ¯
+	 * @param testId
+	 * @return
+	 * @return: List<TopologyLink>
+	 */
+	public List<List<TopologyLink>> getTopologyLinks(String testId);
+	/**
+	 * 
+	 * @Title: fileUpload 
+	 * @Description: ä¸Šä¼ åè®®æ–‡ä»¶
+	 * @param file
+	 * @param path
+	 * @return
+	 * @return: String
+	 */
+	public String fileUpload(CommonsMultipartFile file,String path);
 }
