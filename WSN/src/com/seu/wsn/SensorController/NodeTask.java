@@ -1,7 +1,6 @@
 package com.seu.wsn.SensorController;
 
 import java.net.Socket;
-import java.util.UUID;
 
 import com.seu.wsn.Core.Pojo.Node;
 import com.seu.wsn.Core.StaticConst.Order;
@@ -104,9 +103,11 @@ public class NodeTask implements Runnable{
 			node.setIp(ip);
 			node.setTestId(testId);
 			nodeService.insert(node);
-			System.out.println("========="+ip);
 			while(Order.startConnection){
 				switch(order){
+					case WAITING:{
+						break;
+					}
 					case MODIFY_NODE_INFORMATION:{
 						System.out.println("修改节点信息");
 						order = OrderEnum.WAITING;
@@ -146,9 +147,6 @@ public class NodeTask implements Runnable{
 						System.out.println("网络联通度测试");
 						order = OrderEnum.WAITING;
 						break;
-					}
-					default:{
-						order = OrderEnum.WAITING;
 					}
 				}
 			}

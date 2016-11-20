@@ -90,25 +90,11 @@
           		</c:otherwise>
           	</c:choose>
           	<c:choose>
-          		<c:when test="${navItem=='Query'}">
-          			 <li class="dropdown active">
-		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">查询<span class="caret"></span></a>
-		              <ul class="dropdown-menu" role="menu">
-		                <li><a href="#">历史查询</a></li>
-		                <li class="divider"></li>
-		                <li><a href="#">性能对比</a></li>
-		              </ul>
-		            </li>
+          		<c:when test="${navItem==''}">
+          			 <li class="active" ><a href="">历史查询</a></li>
           	 	</c:when>
           		<c:otherwise>
-          		<li class="dropdown">
-		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">查询<span class="caret"></span></a>
-		              <ul class="dropdown-menu" role="menu">
-		                <li><a href="#">历史查询</a></li>
-		                <li class="divider"></li>
-		                <li><a href="#">性能对比</a></li>
-		              </ul>
-		            </li>
+          			 <li ><a href="">历史查询</a></li>
           		</c:otherwise>
           	</c:choose>
           </ul>
