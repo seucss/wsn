@@ -61,7 +61,6 @@ public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 	 */
 	@Override
 	public Node select(Node node) {
-		// TODO Auto-generated method stub
 		return getSqlSession().selectOne("com.seu.wsn.node.mapper.selectNode", node);
 	}
 	/**
@@ -69,7 +68,6 @@ public class NodeDaoImpl extends SqlSessionDaoSupport implements NodeDao{
 	 */
 	@Override
 	public List<Node> getNodeListByNodeType(Node node) {
-		// TODO Auto-generated method stub
 		return getSqlSession().selectList("com.seu.wsn.node.mapper.selectNodeByType",node);
 	}
 
